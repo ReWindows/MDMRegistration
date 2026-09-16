@@ -1,0 +1,41 @@
+// Flat C exports observed in MDMRegistration.DLL. Unknown ABIs are intentionally not declared.
+// Validated dialects: ISO C17/C23/C26 draft and Windissect C20 (C ABI under C++20).
+#pragma once
+#ifndef MDMREGISTRATION_C_H
+#define MDMREGISTRATION_C_H
+#if defined(__cplusplus)
+#  if __cplusplus < 202002L
+#    define WINDISSECT_C20_PROFILE 0
+#  else
+#    define WINDISSECT_C20_PROFILE 1
+#  endif
+extern "C" {
+#else
+#  if defined(__STDC_VERSION__) && __STDC_VERSION__ < 201710L
+#    error "Windissect C output requires C17 or newer"
+#  endif
+#  define WINDISSECT_C20_PROFILE 0
+#  define WINDISSECT_C_STANDARD __STDC_VERSION__
+#endif
+
+// Export: DiscoverManagementService (ABI unverified)
+// Export: DiscoverManagementServiceEx (ABI unverified)
+// Export: GetDeviceManagementConfigInfo (ABI unverified)
+// Export: GetDeviceRegistrationInfo (ABI unverified)
+// Export: GetManagementAppHyperlink (ABI unverified)
+// Export: IsDeviceRegisteredWithManagement (ABI unverified)
+// Export: IsManagementRegistrationAllowed (ABI unverified)
+// Export: IsMdmUxWithoutAadAllowed (ABI unverified)
+// Export: RegisterDeviceWithManagement (ABI unverified)
+// Export: RegisterDeviceWithManagementUsingAADCredentials (ABI unverified)
+// Export: RegisterDeviceWithManagementUsingAADDeviceCredentials (ABI unverified)
+// Export: RegisterDeviceWithManagementUsingAADDeviceCredentials2 (ABI unverified)
+// Export: SetDeviceManagementConfigInfo (ABI unverified)
+// Export: SetManagedExternally (ABI unverified)
+// Export: UnregisterDeviceWithManagement (ABI unverified)
+// Export: FindDiscoveryService (ABI unverified)
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
+#endif // MDMREGISTRATION_C_H

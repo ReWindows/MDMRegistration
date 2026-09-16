@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "target": "MDMRegistration.DLL",
+  "latest": "2558804662-A4C9B5EB38F04314CA3BDD15D28D6147-1",
+  "builds": [
+    {
+      "key": "2558804662-A4C9B5EB38F04314CA3BDD15D28D6147-1",
+      "timestamp": "2558804662",
+      "pdb_guid": "A4C9B5EB38F04314CA3BDD15D28D6147",
+      "pdb_age": 1,
+      "machine": "0x8664",
+      "ir": "builds/2558804662-A4C9B5EB38F04314CA3BDD15D28D6147-1/ir.json.gz",
+      "previous": null,
+      "diff_json": null,
+      "diff_markdown": null,
+      "summary": null
+    }
+  ],
+  "compression": "gzip"
+}
